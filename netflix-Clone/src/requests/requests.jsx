@@ -1,4 +1,5 @@
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = "014a05a08ab0b7365bef21a7456608c4"
+//process.env.REACT_APP_API_KEY;
 
 const requests = {
   fetchTrending: `/trending/movie/day?api_key=${API_KEY}&language=en-US`,
@@ -16,8 +17,8 @@ const requests = {
   fetchHorror: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
   fetchMusic: `/discover/movie?api_key=${API_KEY}&with_genres=10402`,
   fetchMystery: `/discover/movie?api_key=${API_KEY}&with_genres=9648`,
-  fetchRomance: `/discover/movie?api_key${API_KEY}&with_genres=10749`,
-  fetchScienceFiction: `/discover/movie?api_key${API_KEY}&with_genres=878`,
+  fetchRomance: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
+  fetchScienceFiction: `/discover/movie?api_key=${API_KEY}&with_genres=878`,
   fetchTvMovie: `/discover/movie?api_key=${API_KEY}&with_genres=10770`,
   fetchThriller: `/discover/movie?api_key=${API_KEY}&with_genres=53`,
   fetchWar: `/discover/movie?api_key=${API_KEY}&with_genres=10752`,
