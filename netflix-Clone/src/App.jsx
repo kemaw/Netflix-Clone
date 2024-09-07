@@ -4,11 +4,16 @@ import "./App.css";
 import Row from "./Row";
 import requests from "./requests/requests";
 import Banner from "./Banner";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
+
 
 
 function App() {
   return (
-    <>
+    <div className="App">
+  
+      <Header />
     <Banner />
       <Row
         title="Netflix Originals"
@@ -39,7 +44,8 @@ function App() {
       <Row title="TV Show" fetchUrl={requests.fetchTvShow} />
       <Row title="War" fetchUrl={requests.fetchWar} />
       <Row title="Western Movies" fetchUrl={requests.fetchWestern} />
-    </>
+      <Footer />
+    </div>
   );
 }
 
