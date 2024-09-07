@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Row.css";
 import axios from "./axios/axios";
-// import YouTube from "react-youtube";
+import YouTube from "react-youtube";
+
 import movieTrailer from "movie-trailer";
-// import { width } from "@mui/system";
 const base_url = "https://media.themoviedb.org/t/p/w220_and_h330_face/";
+
+// "https://image.tmdb.org/t/p/original/";
 function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
@@ -59,13 +61,11 @@ function Row({ title, fetchUrl, isLargeRow }) {
           />
         ))}
       </div>
-      {/* <div style={{ padding: "40px" }}>
+      <div style={{ padding: "40px" }}>
         {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
-      </div> */}
+      </div>
     </div>
   );
 }
 
 export default Row;
-
-//Modern browsers provide the URL.searchParams property to make it easy to parse out the parameters from the query string.

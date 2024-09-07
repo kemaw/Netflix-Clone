@@ -10,13 +10,13 @@ const Header = () => {
   const [show, handleShow] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > -1) {
+      if (window.scrollY > 100) {
         handleShow(true);
       } else handleShow(false);
     });
     return () => {
       window.removeEventListener("scroll", scroll);
-    }
+    };
   }, []);
   return (
     <div className={`header_outer_container ${show && "header_black"}`}>
@@ -56,6 +56,5 @@ const Header = () => {
 };
 
 export default Header;
-
 
 //${show && "header_black"}`}

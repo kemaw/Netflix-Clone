@@ -1,6 +1,5 @@
 .header_outer_container {
   position: sticky;
-  /* position: fixed; */
   top: 0;
   display: flex;
   justify-content: center;
@@ -26,7 +25,7 @@
   display: flex;
   justify-content: center;
   justify-content: space-between;
-  padding-top: 40px;
+  align-items: center;
 }
 
 .header_right ul {
@@ -36,7 +35,7 @@
   justify-content: space-between;
 }
 
-.header_container .img {
+.header_container img {
   justify-content: center;
   align-items: center;
   
@@ -48,6 +47,7 @@
 .header_black{
     background-color: #111;
 }
-/* .logoImage{
-    padding-bottom: 80px;
-} */
+
+.header_left img{
+  height: 40px;
+}

@@ -2,6 +2,17 @@
   color: #ffffff;
   object-fit: contain;
   height: 448px;
+  position: relative;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 40vh;
+  z-index: 11;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.937254902));
 }
 
 .banner_contents {
@@ -41,12 +52,4 @@
   background-color: #e6e6e6;
   transition: all 0.2s;
 }
-.banner_fadeBottom {
-  height: 7.4rem;
-  background-image: linear-gradient(
-    180deg,
-    transparent,
-    rgb(37, 37, 37, 0.61),
-    #111
-  );
-}
+
