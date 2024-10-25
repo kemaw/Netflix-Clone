@@ -9,8 +9,8 @@ const base_url = "https://image.tmdb.org/t/p/original/";
 
 // "https://image.tmdb.org/t/p/original/";
 function Row({ title, fetchUrl, isLargeRow }) {
-  const [movies, setMovies] = useState([]);  // state for movies fetch from the API
-  const [trailerUrl, setTrailerUrl] = useState("");  // state for the trailer URL store youtube trailer URL
+  const [movies, setMovies] = useState([]); // state for movies fetch from the API
+  const [trailerUrl, setTrailerUrl] = useState(""); // state for the trailer URL store youtube trailer URL
 
   useEffect(() => {
     async function fetchData() {
@@ -49,23 +49,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
     }
   };
 
-
-  //{movies && movies.length > 0
-//   ? movies.map((movie) =>
-//     movie.backdrop_path !== null && movie.poster_path !== null ? (
-//       <img
-//         key={movie.id}
-//         className={`row__poster ${posterLarge && "row__posterLarge"}`}
-//         src={`${baseUrl}${
-//           posterLarge
-            // ? movie.poster_path
-//             : movie.backdrop_path || movie.poster_path
-//         }`}
-//         onClick={() => handleClick(movie)}
-//       />
-//     ) : null
-//   )
-// : null}//
   return (
     <div className="row ms-5 mt-5">
       <h1>{title}</h1>
@@ -77,8 +60,9 @@ function Row({ title, fetchUrl, isLargeRow }) {
             src={`${base_url}${
               isLargeRow ? movie.poster_path : movie.backdrop_path
             }`}
-            alt={movie.name}/>
-        ))} 
+            alt={movie.name}
+          />
+        ))}
       </div>
       <div style={{ padding: "40px" }}>
         {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
