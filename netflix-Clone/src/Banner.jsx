@@ -21,8 +21,10 @@ function Banner() {
   //   console.log(movie);
   function truncate(str, n) {
     return str?.lenght > n ? str.substr(0, n - 1) + "..." : str;
+    // return str?.lenght > n ? str.slice(0, n - 1) + "..." : str;
+    
   }
-
+//slice=substr
   return (
     <header
       className="banner"
